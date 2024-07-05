@@ -118,7 +118,7 @@ function addEntry(event) {
 	newDeleteItemBtn.addEventListener("click", deleteEntry);
 	addedItemsCount++;
 
-	// update balance and traditionalist
+	// update balance and totals
 	if (entryType === "income") {
 		updateBalanceAndTotals(`${entryAmount}`, null, "add");
 	} else {
