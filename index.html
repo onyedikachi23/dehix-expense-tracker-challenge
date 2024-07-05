@@ -1,0 +1,107 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Expense tracker</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<h1>Dehix expense tracker challenge</h1>
+		</header>
+
+		<main>
+			<div class="main-section-container">
+				<!-- balance feedback section -->
+				<div class="balance-feedback-section">
+					<div class="balance-total-container">
+						<h2>Balance</h2>
+						<span class="balance-value">0</span>
+					</div>
+					<div class="income-and-expense-feedback-container">
+						<div class="total-income">
+							<h3>Total income</h3>
+							<span class="total-income-value">0</span>
+						</div>
+						<div class="total-expenses">
+							<h3>Total expenses</h3>
+							<span class="total-expenses-value">0</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- income and expenses transactions section -->
+				<div class="income-and-expenses-transactions">
+					<!-- income and expenses table -->
+					<div class="income-and-expenses-table-section">
+						<!-- table header -->
+						<div class="table-header">
+							<span>S/N</span>
+							<span>Name</span>
+							<span>Amount</span>
+							<span>Type</span>
+							<button class="all-entries-delete-btn"
+								>Delete</button
+							>
+						</div>
+
+						<!-- transactions entry details -->
+						<div class="transactions-entry-details-container">
+							<p>Your expense tracker entries will appear here</p>
+						</div>
+					</div>
+
+					<!-- transaction entry form -->
+					<div class="transaction-entry-form-container">
+						<h3>Add new entry</h3>
+						<form action="#" id="transaction-entry-form">
+							<label for="entry-type-select"></label>
+							<select
+								name="entry-type"
+								form="transaction-entry-form"
+								id="entry-type-select">
+								<option value="income" selected>Income</option>
+								<option value="expense">Expense</option>
+							</select>
+
+							<div class="value-input-wrapper">
+								<label for="entry-name-input">Name:</label>
+								<input
+									type="text"
+									name="entry-name-input"
+									id="entry-name-input"
+									placeholder="e.g food"
+									minlength="3"
+									required />
+							</div>
+							<div class="value-input-wrapper">
+								<label for="entry-amount-input">Amount:</label>
+								<input
+									type="number"
+									name="entry-amount-input"
+									id="entry-amount-input"
+									placeholder="e.g 300"
+									min="0"
+									required />
+							</div>
+							<button type="submit" class="add-entry-btn"
+								>Add
+								<span class="entry-type-text"
+									>income</span
+								></button
+							>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
