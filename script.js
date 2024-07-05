@@ -64,7 +64,6 @@ function updateBalanceAndTotals(income = 0, expense = 0, updateType) {
 
 	// calculate and update balance
 	const balance = totalIncome - totalExpenses;
-	console.log(balance);
 	balanceValueEl.textContent = balance;
 }
 
@@ -75,7 +74,6 @@ function handleOptionChange(event) {
 function deleteEntry(event) {
 	// get the parent element of the delete button and remove the entry from the DOM
 	const itemToDeleteContainer = event.currentTarget.parentElement;
-	console.log(itemToDeleteContainer);
 	const entryAmountValue =
 		itemToDeleteContainer.querySelector(".entry-amount").textContent;
 	const entryTypeValue =
@@ -86,10 +84,8 @@ function deleteEntry(event) {
 
 	// update balance and totals
 	if (entryTypeValue === "income") {
-		console.log("ran income");
 		updateBalanceAndTotals(entryAmountValue, null, "delete");
 	} else {
-		console.log("ran expense");
 		updateBalanceAndTotals(null, entryAmountValue, "delete");
 	}
 }
